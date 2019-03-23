@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is the main directory. This readme file serves as the guidelines for the using this setup. It summarise the details needed to use this
 configuration correcty.
 
@@ -10,3 +11,8 @@ configuration correcty.
 
 * The webpack.config.js is uncomplete. It was intended to be used to maintain the JavaScript files and configure them. The Babel plugin was also
   intended to be used but for now it is left alone. 
+=======
+Learning advanced CSS.
+I used the automated_wd_theme that I developed and it helped me a great deal.
+It'll contain three projects.
+>>>>>>> 4196de0e3f3530ec476f67703d302addc9f2f308
