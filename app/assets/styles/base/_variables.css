@@ -3,3 +3,9 @@
 *  the above declaration shows a rgb value defined as a variable which can be used in the css files which then wil be converted to it's 
 *  original value by cssVars plugin by postcss during the gulp task. */
 /* Don't forget to import it to the main styles.css file. */
+
+$lGreen: #7ed56f;
+$lGreen_t: rgba(126,213,111,0.8);
+$mGreen: #55c57a;
+$dGreen: #28b485;;
+$dGreen_t: rgba(40,180,133,0.8);
