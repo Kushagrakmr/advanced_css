@@ -518,6 +518,38 @@ html {
            clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100% );
 }
 
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    -webkit-animation-name: moveInLeft;
+            animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+
+    /* animation-delay: 3s; */
+  }
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    -webkit-animation: moveInRight 1s ease-out;
+            animation: moveInRight 1s ease-out;  
+  }
+
 .header__text-box {
     position: absolute;
     top: 40%;
@@ -525,42 +557,8 @@ html {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     text-align: center;
+
   }
-
-.header__text-box__heading-primary {
-      color: white;
-      text-transform: uppercase;
-
-      -webkit-backface-visibility: hidden;
-
-              backface-visibility: hidden;
-      margin-bottom: 6rem;
-    }
-
-.header__text-box__heading-primary_main{
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        -webkit-animation-name: moveInLeft;
-                animation-name: moveInLeft;
-        -webkit-animation-duration: 1s;
-                animation-duration: 1s;
-        -webkit-animation-timing-function: ease-in;
-                animation-timing-function: ease-in;
-
-
-        /* animation-delay: 3s; */
-      }
-
-.header__text-box__heading-primary_sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.7rem;
-        -webkit-animation: moveInRight 1s ease-out;
-                animation: moveInRight 1s ease-out;
-      }
 
 @-webkit-keyframes moveInLeft {
   0% {
@@ -648,9 +646,9 @@ html {
     left: 4rem;
   }
 
-.header__logo-box__logo {
-      height: 3.5rem;
-    }
+.header__logo {
+    height: 3.5rem;
+  }
 
 .btn:link,
 .btn:visited {
@@ -700,16 +698,16 @@ html {
 
   }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
   }
 
-.btn-white::after {
+.btn--white::after {
       background-color: #fff;
     }
 
-.btn-animated {
+.btn--animated {
     -webkit-animation: moveInButton .5s ease-out .75s;
             animation: moveInButton .5s ease-out .75s;
     -webkit-animation-fill-mode: backwards;
