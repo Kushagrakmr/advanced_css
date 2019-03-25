@@ -461,21 +461,29 @@ template {
 
 /* Don't forget to import it to the main styles.css file. */
 
-* {
+*,
+ *::after,
+ *::before {
    margin: 0;
    padding: 0;
-   -webkit-box-sizing: border-box;
-           box-sizing: border-box;
+   -webkit-box-sizing:inherit;
+           box-sizing:inherit;
  }
 
 body {
    font-family: "lato", sans-serif;
    font-weight: 400;
-   font-size: 1rem;
+   font-size: 1.6rem;
    line-height: 1.7;
    color: #777;
-   padding: 30px;
+   padding: 3rem;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
  }
+
+html {
+  font-size: 62.5%; /* Used so that the visiter can change the font size when they zoom in or out.*/
+}
 
 /* The mixin will be used like this 
 *   @mixin atSmall {
@@ -526,14 +534,14 @@ body {
       -webkit-backface-visibility: hidden;
 
               backface-visibility: hidden;
-      margin-bottom: 60px;
+      margin-bottom: 6rem;
     }
 
 .header__text-box__heading-primary_main{
         display: block;
-        font-size: 60px;
+        font-size: 6rem;
         font-weight: 400;
-        letter-spacing: 35px;
+        letter-spacing: 3.5rem;
         -webkit-animation-name: moveInLeft;
                 animation-name: moveInLeft;
         -webkit-animation-duration: 1s;
@@ -547,9 +555,9 @@ body {
 
 .header__text-box__heading-primary_sub {
         display: block;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 17px;
+        letter-spacing: 1.7rem;
         -webkit-animation: moveInRight 1s ease-out;
                 animation: moveInRight 1s ease-out;
       }
@@ -557,15 +565,15 @@ body {
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
   }
 
   
 
   80% {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
+    -webkit-transform: translateX(1.5rem);
+            transform: translateX(1.5rem);
   }
 
   100% {
@@ -578,15 +586,15 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
   }
 
   
 
   80% {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
+    -webkit-transform: translateX(1.5rem);
+            transform: translateX(1.5rem);
   }
 
   100% {
@@ -599,13 +607,13 @@ body {
 @-webkit-keyframes moveInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
   }
 
   80% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
+    -webkit-transform: translateX(-1.5rem);
+            transform: translateX(-1.5rem);
   }
 
   100% {
@@ -618,13 +626,13 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
   }
 
   80% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
+    -webkit-transform: translateX(-1.5rem);
+            transform: translateX(-1.5rem);
   }
 
   100% {
@@ -636,31 +644,32 @@ body {
 
 .header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
   }
 
 .header__logo-box__logo {
-      height: 35px;
+      height: 3.5rem;
     }
 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   -webkit-transition: all .2s;
   transition: all .2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
-    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
   }
 
 .btn:hover::after {
@@ -672,8 +681,8 @@ body {
 .btn:active {
     -webkit-transform: translateY(-1px);
             transform: translateY(-1px);
-    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
   }
 
 .btn::after {
@@ -681,7 +690,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -710,8 +719,8 @@ body {
 @-webkit-keyframes moveInButton {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
 
   100% {
@@ -724,8 +733,8 @@ body {
 @keyframes moveInButton {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
 
   100% {

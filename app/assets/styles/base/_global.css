@@ -1,18 +1,25 @@
 /* It contains only the global rules for the html files which are applied to the HTML files. */
 /* Don't forget to import it to the main styles.css file. */
- * {
+ *,
+ *::after,
+ *::before {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
+   box-sizing:inherit;
  }
 
  body {
    font-family: "lato", sans-serif;
    font-weight: 400;
-   font-size: 1rem;
+   font-size: 1.6rem;
    line-height: 1.7;
    color: #777;
-   padding: 30px;
+   padding: 3rem;
+   box-sizing: border-box;
  }
+
+html {
+  font-size: 62.5%; /* Used so that the visiter can change the font size when they zoom in or out.*/
+}
 
  
