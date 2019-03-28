@@ -7,6 +7,9 @@
     "lazysizes": "4.0.1",
     "normalize.css": "7.0.0",
     "picturefill": "3.0.2",
+    "postcss-automath": "^1.0.1",
+    "postcss-calc": "^7.0.1",
+    "postcss-math": "0.0.10",
     "waypoints": "4.0.1",
     "webpack-cli": "^3.2.3"
   },
@@ -29,6 +32,7 @@
     "gulp-uglify": "3.0.0",
     "gulp-usemin": "0.3.28",
     "gulp-watch": "4.3.11",
+    "node-sass": "^4.5.3",
     "postcss-hexrgba": "1.0.0",
     "postcss-import": "11.0.0",
     "postcss-mixins": "6.2.0",

@@ -9,3 +9,8 @@ $lGreen_t: rgba(126,213,111,0.8);
 $mGreen: #55c57a;
 $dGreen: #28b485;;
 $dGreen_t: rgba(40,180,133,0.8);
+
+/* GRID VARIABLES */
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
