@@ -58,15 +58,28 @@
 
 }
 
-
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
+.btn-text {
+  &:link,
+  &:visited {
+    color: $mGreen;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $mGreen;
+    padding: 3px;
+    font-size: 1.6rem;
+    transition: all .2s;
   }
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
+  &:hover {
+    background-color: $mGreen;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0,0,0 .15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0 .15);
+    transform: translateY(0px);
+
   }
 }

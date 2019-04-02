@@ -5,14 +5,14 @@ var gulp = require("gulp"),
     nested = require('postcss-nested'),
     cssImport = require('postcss-import'),
     mixins = require('postcss-mixins'),
-    calc   = require('postcss-automath');
+    math   = require('postcss-automath');
 
 
 
 
 gulp.task('styles', function(){
   return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssvars, nested,calc, autoprefixer]))
+    .pipe(postcss([cssImport, mixins, cssvars, nested, math, autoprefixer]))
     .on('error', function(errorInfo){
       console.log(errorInfo.toString());
       this.emit('end') //this'll tell the gulp task that the task had been finished even it the error occured and so that the gulp will be working as it should be.
