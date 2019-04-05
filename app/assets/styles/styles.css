@@ -9,5 +9,6 @@
 @import "modules/_grid-system";
 @import "modules/_home";
 @import "modules/_utility";
-@import "modules/composition";
+@import "modules/_composition";
 @import "modules/_feature-box";
+@import "modules/_card";

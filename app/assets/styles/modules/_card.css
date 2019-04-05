@@ -1,0 +1,107 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    background-color: orangered;
+    height: 50rem;
+    transition: all .5s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+    
+
+    &--front {
+      background-color: white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-color: linear-gradient(to right bottom, $col-secondary-light, $col-secondary-dark);
+      }
+    }
+  }
+
+  /* When the card is hovered then the card side is transformed card:hover then card__side is transformed */
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  /* Content Code ahead FRONT SIDE STYLING */
+  &__picture {
+    background-size:cover;
+    height: 45%;
+    background-blend-mode: saturation;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $col-secondary-light, $col-secondary-dark), url(../../../assets/img/nat-5.jpg);
+    }
+    
+    &--2 {
+      background-image: url(../../../assets/img/nat-6.jpg);
+    }
+    &--3 {
+      background-image: url(../../../assets/img/nat-7.jpg);
+    }
+
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    text-align: right;
+    right: 2rem;
+    top: 12rem;
+    max-width: 20rem;
+    width: 70%;
+
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $col-secondary-light_t, $col-secondary-dark_t);
+    }
+  }
+
+  &__details {
+          padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+
+      }
+    }
+
+  }
+}
