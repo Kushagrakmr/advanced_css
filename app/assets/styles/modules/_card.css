@@ -5,7 +5,6 @@
   height: 50rem;
 
   &__side {
-    background-color: orangered;
     height: 50rem;
     transition: all .5s ease;
     position: absolute;
@@ -26,7 +25,15 @@
       transform: rotateY(180deg);
 
       &-1 {
-        background-color: linear-gradient(to right bottom, $col-secondary-light, $col-secondary-dark);
+        background-image: linear-gradient(to right bottom, $col-secondary-light, $col-secondary-dark);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, $lGreen,$dGreen);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, $col-tertiary-light, $col-tertiary-dark);
       }
     }
   }
@@ -52,10 +59,10 @@
     }
     
     &--2 {
-      background-image: url(../../../assets/img/nat-6.jpg);
+      background-image: linear-gradient(to right bottom, $lGreen_t, $dGreen_t), url(../../../assets/img/nat-6.jpg);
     }
     &--3 {
-      background-image: url(../../../assets/img/nat-7.jpg);
+      background-image: linear-gradient(to right bottom, $col-tertiary-light, $col-tertiary-dark),url(../../../assets/img/nat-7.jpg);
     }
 
   }
@@ -81,6 +88,14 @@
     &--1 {
       background-image: linear-gradient(to right bottom, $col-secondary-light_t, $col-secondary-dark_t);
     }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, $lGreen_t, $dGreen_t);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, $col-tertiary-light, $col-tertiary-dark);
+    }
   }
 
   &__details {
@@ -103,5 +118,31 @@
       }
     }
 
+  }
+
+  /* Back Side Styling */
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
