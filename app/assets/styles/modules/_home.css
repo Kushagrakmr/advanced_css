@@ -25,7 +25,7 @@
   margin-top: -10rem;
 }
 
-.section-stories {
+.section-story {
+  position: relative;
   padding: 15rem 0;
-  background-color: $grey-light-1; 
 }
